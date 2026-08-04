@@ -10,6 +10,9 @@
         <hr>
     </header>
     <main>
+
+
+<!-- ÁREA DE RESUMO -->
         <section>
             <h2> Resumo operacional </h2>
             <ul>
@@ -21,11 +24,12 @@
 
         <hr>
 
+<!-- SEÇÃO DE ABRIR CHAMADO -->
         <section>
             <h2> Abrir novo chamado </h2>
             <form>
                 <label for="solicitante">Nome do solicitante</label><br>
-                <input type="text" id="solicitante" required><br><br> 
+                <input type="text" id="solicitante" placeholder="Digite seu nome..." required><br><br><br>
 
                 <label for="setor">Setor:</label><br>
                 <select id="setor" required>
@@ -34,8 +38,10 @@
                     <option value="rh">Recursos Humanos</option>
                     <option value="producao">Produção</option>
                     <option value="vendas">Vendas</option>
-                </select><br><br>
+                </select><br><br><br>
 
+
+<!-- ESCOLHA - PRIORIDADE DE CHAMADO -->
                 <label> Prioridade do chamado </label>
                 <input type="radio" id=p_baixa" name="prioridade" value="baixa">
                 <label for="p_baixa">Baixa</label>
@@ -44,12 +50,106 @@
                 <label for="p_media">Média</label>
 
                 <input type="radio" id=p_critica" name="prioridade" value="critica">
-                <label for="p_critica">Crítica</label>
+                <label for="p_critica">Crítica</label><br><br><br>
+
                 
+<!-- ESCOLHA - EQUIPAMENTOS ENVOLVIDOS -->
+                <label> Equipamentos Envolvidos: </label><br>
+                <input type="checkbox" id="eq_monitor" value="monitor">
+                <label for="eq_monitor">Monitor</label>
+
+                <input type="checkbox" id="eq_perifericos" value="perifericos">
+                <label for="eq_perifericos">Teclado/Mouse</label>
+
+                <input type="checkbox" id="eq_pc" value="computador">
+                <label for="eq_pc">Computador/Impressora</label>
+
+                <input type="checkbox" id="eq_impressora" value="impressora">
+                <label for="eq_impressora">Impressora</label><br><br><br>
+
+                
+<!-- CAIXA PARA RECLAMAÇÕES -->
+                <label for="descricao"> Descrição Detalhada: </label><br>
+                <textarea id="descricao" rows="4" cols="50" placeholder="Descreva o erro..."></textarea><br><br>
+
+                <button type="submit">Enviar Chamado</button>
+                <button type="submit">Limpar</button>
             </form>
+        </section><br>
+
+        <hr>
+
+        <section>
+            <h2> Chamados Recentes </h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th> Setor </th>
+                        <th> ID Chamado </th>
+                        <th> solicitante </th>
+                        <th> Prioridade </th>
+                        <th> Data Abertura </th>
+                        <th> Status </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td rowspan="2"> Financeiro </td>
+                        <td>#1209</td>
+                        <td> Carlos </td>
+                        <td> Alta </td>
+                        <td> 04/08/2026 </td>
+                        <td> Em andamento </td>
+                    </tr>
+
+                    <tr>
+                        <td>#1406</td>
+                        <td> Maria </td>
+                        <td> Média </td>
+                        <td> 31/12/2026 </td>
+                        <td> Em andamento </td>
+                    </tr>
+
+                    <tr>
+                        <td> Produção </td>
+                        <td>#1406</td>
+                        <td> Maria </td>
+                        <td> Média </td>
+                        <td> 31/12/2026 </td>
+                        <td> Em andamento </td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="2"> Vendas </td>
+                        <td>#1406</td>
+                        <td> Maria </td>
+                        <td> Média </td>
+                        <td> 31/12/2026 </td>
+                        <td> Em andamento </td>
+                    </tr>
+
+                    <tr>
+                        <td>#1406</td>
+                        <td> Maria </td>
+                        <td> Média </td>
+                        <td> 31/12/2026 </td>
+                        <td> Em andamento </td>
+                    </tr>
+
+                </tbody>
+            </table>
         </section>
 
+    </main><br>
 
-    </main>
+    <hr><br><br>
+
+    
+<!-- RODAPÉ -->
+<footer> 
+    <p id="rodape"> &copy; 2026 Jhecilly - TI 3°B </p>
+</footer>
+
 </body>
 </html>
